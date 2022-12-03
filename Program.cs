@@ -1,3 +1,7 @@
+using back_project.DAL;
+using back_project.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace back_project
 {
     public class Program
@@ -8,6 +12,17 @@ namespace back_project
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+
+            builder.Services.AddDbContext<AppDbContext>(options =>
+            {
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+            });
+
+            Constants.RootPath = builder.Environment.WebRootPath;
+            Constants.SliderPath = Path.Combine(Constants.RootPath, "assets", "img", "slider");
+            Constants.TestimonialSliderPath = Path.Combine(Constants.RootPath, "assets", "img", "testimonial");
+
 
             var app = builder.Build();
 
@@ -24,6 +39,7 @@ namespace back_project
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

@@ -1,0 +1,21 @@
+﻿@{
+    Slider slider = Model;
+}
+
+<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Slider Details</h4>
+
+                <p><b>Title: </b> @Html.Raw(@slider.Title)</p>
+                <p><b>Subtitle: </b> @slider.Subtitle</p>
+                <p><b>Button name: </b> @slider.ButtonName</p>
+                <p><b>Button link: </b> @slider.ButtonLink</p>
+                <p><b>Slider image:</b> </p> <img src="/assets/img/slider/@slider.ImageName" class="w-50" />
+                <br/> <br/>
+                <p><a class="btn btn-light" asp-action="Index">Cancel</a></p>
+            </div>
+        </div>
+    </div>
+</div>

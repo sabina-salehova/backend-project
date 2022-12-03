@@ -1,0 +1,37 @@
+﻿@model TestimonialSliderUpdateViewModel
+
+<div class="row">
+    <div class="col-md-10 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Default form</h4>
+                <form class="forms-sample" method="post" asp-action="update" enctype="multipart/form-data">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="FullName">FullName</label>
+                        <input asp-for="FullName" class="form-control" placeholder="FullName">
+                        <span asp-validation-for="FullName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Position">Position</label>
+                        <input asp-for="Position" class="form-control" placeholder="Position">
+                        <span asp-validation-for="Position" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Testimonial">Testimonial</label>
+                        <input asp-for="Testimonial" class="form-control" placeholder="Testimonial">
+                        <span asp-validation-for="Testimonial" class="text-danger"></span>
+                    </div>
+                    <img src="/assets/img/testimonial/@Model.ImageUrl" class="w-50" />
+                    <div class="form-group">
+                        <label asp-for="Image">Image</label>
+                        <input asp-for="Image" class="form-control" placeholder="Image">
+                        <span asp-validation-for="Image" class="text-danger"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                    <button class="btn btn-light" asp-action="Index">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
