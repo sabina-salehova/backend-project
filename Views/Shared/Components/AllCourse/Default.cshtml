@@ -33,9 +33,9 @@
                             </a>
                         </div>
                         <div class="course-content">
-                            <h3><a href="course-details.html">@course.Name</a></h3>
+                            <h3>@course.Name</h3>
                             <p>@course.Description</p>
-                            <a class="default-btn" href="course-details.html">read more</a>
+                            <a class="default-btn" asp-controller="Courses" asp-action="Details" asp-route-id="@course.Id">read more</a>
                         </div>
                     </div>
                 </div>
