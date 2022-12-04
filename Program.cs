@@ -1,3 +1,4 @@
+using back_project.Areas.Admin.Services;
 using back_project.DAL;
 using back_project.Data;
 using Microsoft.EntityFrameworkCore;
@@ -19,10 +20,13 @@ namespace back_project
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
             });
 
+            builder.Services.AddScoped<CategoryService>();
+
             Constants.RootPath = builder.Environment.WebRootPath;
             Constants.SliderPath = Path.Combine(Constants.RootPath, "assets", "img", "slider");
             Constants.TestimonialSliderPath = Path.Combine(Constants.RootPath, "assets", "img", "testimonial");
-
+            Constants.TeacherPath = Path.Combine(Constants.RootPath, "assets", "img", "teacher");
+            Constants.CoursePath = Path.Combine(Constants.RootPath, "assets", "img", "course");
 
             var app = builder.Build();
 

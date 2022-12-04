@@ -6,6 +6,10 @@
 
         public static string SliderPath;
 
-        public static string TestimonialSliderPath;        
+        public static string TestimonialSliderPath;
+
+        public static string TeacherPath;
+
+        public static string CoursePath;
     }
 }

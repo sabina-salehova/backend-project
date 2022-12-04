@@ -5,10 +5,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace back_project.ViewComponents
 {
-    public class TestimonialSliderViewComponent : ViewComponent
+    public class TestimonialSlidersViewComponent : ViewComponent
     {
         private readonly AppDbContext _dbContext;
-        public TestimonialSliderViewComponent(AppDbContext dbContext)
+        public TestimonialSlidersViewComponent(AppDbContext dbContext)
         {
             _dbContext = dbContext;
         }

@@ -1,0 +1,38 @@
+﻿@{
+    Teacher teacher = Model;
+}
+
+<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body" style="width: 30rem;">
+                <h4 class="card-title">Teacher Details</h4>
+
+                <p><b>Name: </b> @teacher.Name</p>
+                <p><b>Surname: </b> @teacher.Surname</p>
+                <p><b>Position: </b> @teacher.Position</p>
+                <p><b>About: </b> @teacher.About</p>
+                <p><b>Degree: </b> @teacher.Degree</p>
+                <p><b>Experience: </b> @teacher.Experience</p>
+                <p><b>Hobbies: </b> @teacher.Hobbies</p>
+                <p><b>Faculty: </b> @teacher.Faculty</p>
+                <p><b>Email: </b> @teacher.Email</p>
+                <p><b>Phone: </b> @teacher.Phone</p>
+                <p><b>SkypeAddressName: </b> @teacher.SkypeAddressName</p>
+                <p><b>FacebookUrl: </b> @teacher.FacebookUrl</p>
+                <p><b>PinterestUrl: </b> @teacher.PinterestUrl</p>
+                <p><b>VimeoUrl: </b> @teacher.VimeoUrl</p>
+                <p><b>TwitterUrl: </b> @teacher.TwitterUrl</p>
+                <p><b>LanguageProgress: </b> @teacher.LanguageProgress</p>
+                <p><b>TeamLeaderProgress: </b> @teacher.TeamLeaderProgress</p>
+                <p><b>DevelopmentProgress: </b> @teacher.DevelopmentProgress</p>
+                <p><b>DesignProgress: </b> @teacher.DesignProgress</p>
+                <p><b>InnovationProgress: </b> @teacher.InnovationProgress</p>
+                <p><b>CommunicationProgress: </b> @teacher.CommunicationProgress</p>
+                <p><b>Image:</b> </p> <img src="/assets/img/teacher/@teacher.ImageName" class="w-25" />
+                <br /> <br />
+                <p><a class="btn btn-light" asp-action="Index">Cancel</a></p>
+            </div>
+        </div>
+    </div>
+</div>

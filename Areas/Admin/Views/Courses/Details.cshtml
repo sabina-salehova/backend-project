@@ -1,0 +1,30 @@
+﻿@{
+    Course course = Model;
+}
+
+<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Course Details</h4>
+                <p><b>Name: </b> @course.Name</p>
+                <p><b>Description: </b> @course.Description</p>
+                <p><b>About: </b> @course.About</p>
+                <p><b>Assesments: </b> @course.Assesments</p>
+                <p><b>Duration: </b> @course.Duration</p>
+                <p><b>Starts: </b> @course.Starts</p>
+                <p><b>SkillLevel: </b> @course.SkillLevel</p>
+                <p><b>Certification: </b> @course.Certification</p>
+                <p><b>HowToApply: </b> @course.HowToApply</p>
+                <p><b>LeaveAReply: </b> @course.LeaveAReply</p>
+                <p><b>Language: </b> @course.Language</p>
+                <p><b>StudentCount: </b> @course.StudentCount</p>
+                <p><b>Fee: </b> @course.Fee</p>
+                <p><b>Category Name: </b> @course.Category.Name</p>
+                <p><b>Course image:</b> </p> <img src="/assets/img/course/@course.ImageName" class="w-50" />
+                <br /> <br />
+                <p><a class="btn btn-light" asp-action="Index">Cancel</a></p>
+            </div>
+        </div>
+    </div>
+</div>

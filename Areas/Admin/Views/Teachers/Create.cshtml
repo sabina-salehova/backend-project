@@ -1,0 +1,126 @@
+﻿@model TeacherCreateViewModel
+
+<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Default form</h4>
+                <form class="forms-sample" method="post" asp-action="Create" enctype="multipart/form-data">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>                   
+                    <div class="form-group">
+                        <label asp-for="Name">Name</label>
+                        <input asp-for="Name" class="form-control" placeholder="Title">
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Surname">Surname</label>
+                        <input asp-for="Surname" class="form-control" placeholder="Surname">
+                        <span asp-validation-for="Surname" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Position">Position</label>
+                        <input asp-for="Position" class="form-control" placeholder="Title">
+                        <span asp-validation-for="Position" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="About">About</label>
+                        <input asp-for="About" class="form-control" placeholder="Title">
+                        <span asp-validation-for="About" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Degree">Degree</label>
+                        <input asp-for="Degree" class="form-control" placeholder="Title">
+                        <span asp-validation-for="Degree" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Experience">Experience</label>
+                        <input asp-for="Experience" class="form-control" placeholder="Title">
+                        <span asp-validation-for="Experience" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Hobbies">Hobbies</label>
+                        <input asp-for="Hobbies" class="form-control" placeholder="Title">
+                        <span asp-validation-for="Hobbies" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Faculty">Faculty</label>
+                        <input asp-for="Faculty" class="form-control" placeholder="Title">
+                        <span asp-validation-for="Faculty" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Email">Email</label>
+                        <input asp-for="Email" class="form-control" placeholder="Title">
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Phone">Phone</label>
+                        <input asp-for="Phone" class="form-control" placeholder="Title">
+                        <span asp-validation-for="Phone" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="SkypeAddressName">SkypeAddressName</label>
+                        <input asp-for="SkypeAddressName" class="form-control" placeholder="Title">
+                        <span asp-validation-for="SkypeAddressName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="FacebookUrl">FacebookUrl</label>
+                        <input asp-for="FacebookUrl" class="form-control" placeholder="Title">
+                        <span asp-validation-for="FacebookUrl" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="PinterestUrl">PinterestUrl</label>
+                        <input asp-for="PinterestUrl" class="form-control" placeholder="Title">
+                        <span asp-validation-for="PinterestUrl" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="VimeoUrl">VimeoUrl</label>
+                        <input asp-for="VimeoUrl" class="form-control" placeholder="Title">
+                        <span asp-validation-for="VimeoUrl" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="TwitterUrl">TwitterUrl</label>
+                        <input asp-for="TwitterUrl" class="form-control" placeholder="Title">
+                        <span asp-validation-for="TwitterUrl" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="LanguageProgress">LanguageProgress</label>
+                        <input asp-for="LanguageProgress" class="form-control" placeholder="Title">
+                        <span asp-validation-for="LanguageProgress" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="TeamLeaderProgress">TeamLeaderProgress</label>
+                        <input asp-for="TeamLeaderProgress" class="form-control" placeholder="Title">
+                        <span asp-validation-for="TeamLeaderProgress" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="DevelopmentProgress">DevelopmentProgress</label>
+                        <input asp-for="DevelopmentProgress" class="form-control" placeholder="Title">
+                        <span asp-validation-for="DevelopmentProgress" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="DesignProgress">DesignProgress</label>
+                        <input asp-for="DesignProgress" class="form-control" placeholder="Title">
+                        <span asp-validation-for="DesignProgress" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="InnovationProgress">InnovationProgress</label>
+                        <input asp-for="InnovationProgress" class="form-control" placeholder="Title">
+                        <span asp-validation-for="InnovationProgress" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="CommunicationProgress">CommunicationProgress</label>
+                        <input asp-for="CommunicationProgress" class="form-control" placeholder="Title">
+                        <span asp-validation-for="CommunicationProgress" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Image">Image</label>
+                        <input asp-for="Image" class="form-control" placeholder="Name" accept="image/*">
+                        <span asp-validation-for="Image" class="text-danger"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                    <button class="btn btn-light" asp-action="Index">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -47,47 +47,20 @@
                                 <nav>
                                     <ul>
                                         <li>
-                                            <a href="index.html">Home</a>
-                                            <ul>
-                                                <li><a href="index.html">Home One</a></li>
-                                                <li><a href="index-2.html">Home Two</a></li>
-                                                <li><a href="index-3.html">Home Three</a></li>
-                                                <li><a href="index-4.html">Home Four</a></li>
-                                                <li><a href="index-5.html">Home Five</a></li>
-                                            </ul>
+                                            <a asp-controller="home" asp-action="index">Home</a>
                                         </li>
                                         <li><a href="about.html">About</a></li>
                                         <li>
-                                            <a href="course.html">courses</a>
-                                            <ul>
-                                                <li><a href="course.html">courses</a></li>
-                                                <li><a href="course-details.html">courses details</a></li>
-                                            </ul>
+                                            <a asp-controller="courses" asp-action="index">courses</a>
                                         </li>
                                         <li>
                                             <a href="event.html">event</a>
-                                            <ul>
-                                                <li><a href="event.html">event</a></li>
-                                                <li><a href="event-left-side-bar.html">event left sidebar</a></li>
-                                                <li><a href="event-right-side-bar.html">event right sidebar</a></li>
-                                                <li><a href="event-details.html">event details</a></li>
-                                            </ul>
                                         </li>
                                         <li class="hidden-sm">
-                                            <a href="teacher.html">teacher</a>
-                                            <ul>
-                                                <li><a href="teacher.html">teacher</a></li>
-                                                <li><a href="teacher-details.html">teacher details</a></li>
-                                            </ul>
+                                            <a asp-controller="teachers" asp-action="index">teacher</a>
                                         </li>
                                         <li>
                                             <a href="blog.html">blog</a>
-                                            <ul>
-                                                <li><a href="blog.html">blog</a></li>
-                                                <li><a href="blog-left-side-bar.html">blog left sidebar</a></li>
-                                                <li><a href="blog-right-side-bar.html">blog righ sidebar</a></li>
-                                                <li><a href="blog-details.html">blog details</a></li>
-                                            </ul>
                                         </li>
                                         <li><a href="contact.html">Contact</a></li>
                                         <li><a href="#">Buy Now</a>
@@ -104,6 +77,38 @@
     </header>
     <!-- Header Area End -->
             @RenderBody()
+    <!-- Subscribe Start -->
+    <div class="subscribe-area pt-60 pb-70">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="subscribe-content section-title text-center">
+                        <h2>subscribe our newsletter</h2>
+                        <p>I must explain to you how all this mistaken idea </p>
+                    </div>
+                    <div class="newsletter-form mc_embed_signup">
+                        <form action="http://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                            <div id="mc_embed_signup_scroll" class="mc-form">
+                                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter your e-mail address" required>
+                                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                <div class="mc-news" aria-hidden="true"><input type="text" name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef" tabindex="-1" value=""></div>
+                                <button id="mc-embedded-subscribe" class="default-btn" type="submit" name="subscribe"><span>subscribe</span></button>
+                            </div>
+                        </form>
+                        <!-- mailchimp-alerts Start -->
+                        <div class="mailchimp-alerts">
+                            <div class="mailchimp-submitting"></div><!-- mailchimp-submitting end -->
+                            <div class="mailchimp-success"></div><!-- mailchimp-success end -->
+                            <div class="mailchimp-error"></div><!-- mailchimp-error end -->
+                        </div>
+                        <!-- mailchimp-alerts end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Subscribe End -->
+
     <!-- Footer Start -->
     <footer class="footer-area">
         <div class="main-footer">

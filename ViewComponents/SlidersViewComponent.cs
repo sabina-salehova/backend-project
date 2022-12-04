@@ -5,10 +5,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace back_project.ViewComponents
 {
-    public class SliderViewComponent : ViewComponent
+    public class SlidersViewComponent : ViewComponent
     {
         private readonly AppDbContext _dbContext;
-        public SliderViewComponent(AppDbContext dbContext)
+        public SlidersViewComponent(AppDbContext dbContext)
         {
             _dbContext = dbContext;
         }

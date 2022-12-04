@@ -1,11 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
 
 namespace back_project.Controllers
 {
-    public class HomeController : Controller
+    public class CoursesController : Controller
     {
         public IActionResult Index()
+        {
+            return View();
+        }
+        public IActionResult Details(int id)
         {
             return View();
         }
