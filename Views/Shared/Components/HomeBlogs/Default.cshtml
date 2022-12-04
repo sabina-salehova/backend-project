@@ -1,0 +1,43 @@
+﻿@{
+    List<Blog> blogs = Model;
+}
+
+@if (blogs.Count>0)
+{
+    <div class="blog-area pt-150 pb-150">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="section-title text-center">
+                        <img src="~/assets/img/icon/section.png" alt="section-title">
+                        <h2>LATEST FROM BLOG</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                @foreach (var blog in blogs)
+                {
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="single-blog">
+                            <div class="blog-img">
+                                <a href="blog-details.html"><img src="~/assets/img/blog/@blog.ImageName" alt="blog"></a>
+                                <div class="blog-hover">
+                                    <a href="blog-details.html"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-top">
+                                    <p>By @blog.Writer  /  @blog.Date  /  <i class="fa fa-comments-o"></i> @blog.CommentCount</p>
+                                </div>
+                                <div class="blog-bottom">
+                                    <h2>@blog.Name</h2>
+                                    <a asp-controller="Blogs" asp-action="Details" asp-route-id="@blog.Id">read more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+}

@@ -27,6 +27,7 @@ namespace back_project
             Constants.TestimonialSliderPath = Path.Combine(Constants.RootPath, "assets", "img", "testimonial");
             Constants.TeacherPath = Path.Combine(Constants.RootPath, "assets", "img", "teacher");
             Constants.CoursePath = Path.Combine(Constants.RootPath, "assets", "img", "course");
+            Constants.BlogPath = Path.Combine(Constants.RootPath, "assets", "img", "blog");
 
             var app = builder.Build();
 

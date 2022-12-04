@@ -11,5 +11,7 @@
         public static string TeacherPath;
 
         public static string CoursePath;
+
+        public static string BlogPath;
     }
 }

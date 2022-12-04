@@ -1,0 +1,21 @@
+﻿@{
+    Blog blog = Model;
+}
+
+<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Blog Details</h4>
+                <p><b>Name: </b> @blog.Name</p>
+                <p><b>Content: </b> @blog.Content</p>
+                <p><b>Writer: </b> @blog.Writer</p>
+                <p><b>CommentCount: </b> @blog.CommentCount</p>
+                <p><b>Date: </b> @blog.Date</p>
+                <p><b>Course image:</b> </p> <img src="/assets/img/blog/@blog.ImageName" class="w-50" />
+                <br /> <br />
+                <p><a class="btn btn-light" asp-action="Index">Cancel</a></p>
+            </div>
+        </div>
+    </div>
+</div>
