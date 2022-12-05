@@ -1,0 +1,65 @@
+﻿@{
+    List<Event> events = Model;
+}
+@if(events.Count>0)
+{
+    <div class="event-area one text-center pt-140 pb-150">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="section-title">
+                        <img src="~/assets/img/icon/section.png" alt="section-title">
+                        <h2>UPCOMMING EVENTS</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    @for (int i = 0; i < events.Count / 2; i++)
+                    {
+                        <div class="single-event mb-35">
+                            <div class="event-date">
+                                <h3><a>@events[i].StartTime.Day <span>@events[i].StartTime.Month</span></a></h3>
+                            </div>
+                            <div class="event-content text-left">
+                                <div class="event-content-left">
+                                    <h4><a>@events[i].Name</a></h4>
+                                    <ul>
+                                        <li><i class="fa fa-clock-o"></i>@events[i].StartTime.Hour AM - @events[i].EndTime.Hour PM</li>
+                                        <li><i class="fa fa-map-marker"></i>@events[i].Venue</li>
+                                    </ul>
+                                </div>
+                                <div class="event-content-right">
+                                    <a class="default-btn" asp-controller="Events" asp-action="Details" asp-route-id="@events[i].Id">join now</a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div class="col-md-6 hidden-sm hidden-xs">
+                    @for (int i = events.Count / 2; i < events.Count; i++)
+                    {
+                        <div class="single-event mb-35">
+                            <div class="event-date">
+                                <h3><a>@events[i].StartTime.Day <span>@events[i].StartTime.Month</span></a></h3>
+                            </div>
+                            <div class="event-content text-left">
+                                <div class="event-content-left">
+                                    <h4><a>@events[i].Name</a></h4>
+                                    <ul>
+                                        <li><i class="fa fa-clock-o"></i>@events[i].StartTime.Hour AM - @events[i].EndTime.Hour PM</li>
+                                        <li><i class="fa fa-map-marker"></i>@events[i].Venue</li>
+                                    </ul>
+                                </div>
+                                <div class="event-content-right">
+                                    <a class="default-btn" asp-controller="Events" asp-action="Details" asp-route-id="@events[i].Id">join now</a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+}

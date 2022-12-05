@@ -91,7 +91,7 @@
 <!-- Courses Area End -->
 
 <!-- Event Area Start -->
-<div class="event-area one text-center pt-140 pb-150">
+@*<div class="event-area one text-center pt-140 pb-150">
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
@@ -244,7 +244,9 @@
             </div>
         </div>
     </div>
-</div>
+</div>*@
+
+@await Component.InvokeAsync("HomeEvents")
 <!-- Event Area End -->
 
 <!-- Testimonial Area Start -->
