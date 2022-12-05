@@ -21,6 +21,7 @@ namespace back_project
             });
 
             builder.Services.AddScoped<CategoryService>();
+            builder.Services.AddScoped<SpeakerService>();
 
             Constants.RootPath = builder.Environment.WebRootPath;
             Constants.SliderPath = Path.Combine(Constants.RootPath, "assets", "img", "slider");
@@ -28,6 +29,7 @@ namespace back_project
             Constants.TeacherPath = Path.Combine(Constants.RootPath, "assets", "img", "teacher");
             Constants.CoursePath = Path.Combine(Constants.RootPath, "assets", "img", "course");
             Constants.BlogPath = Path.Combine(Constants.RootPath, "assets", "img", "blog");
+            Constants.SpeakerAndEventPath = Path.Combine(Constants.RootPath, "assets", "img", "event");
 
             var app = builder.Build();
 

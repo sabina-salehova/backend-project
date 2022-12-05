@@ -1,0 +1,53 @@
+﻿@model EventCreateViewModel
+
+<div class="row col-sm-6">
+    <div class="col-sm-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title"> Create event</h4>
+                <form class="forms-sample" method="post" asp-action="Create" enctype="multipart/form-data">
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="Name">Name</label>
+                        <input asp-for="Name" class="form-control" placeholder="Name">
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Content">Content</label>
+                        <input asp-for="Content" class="form-control" placeholder="Content">
+                        <span asp-validation-for="Content" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Venue">Venue</label>
+                        <input asp-for="Venue" class="form-control" placeholder="Venue">
+                        <span asp-validation-for="Venue" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="StartTime">StartTime</label>
+                        <input type="date" asp-for="StartTime" class="form-control" placeholder="StartTime">
+                        <span asp-validation-for="StartTime" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="EndTime">EndTime</label>
+                        <input type="date" asp-for="EndTime" class="form-control" placeholder="EndTime">
+                        <span asp-validation-for="EndTime" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Image">Image</label>
+                        <input asp-for="Image" class="form-control" placeholder="Name" accept="image/*">
+                        <span asp-validation-for="Image" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="SpeakersIds">Speakers</label>
+                        <select asp-for="SpeakersIds" asp-items="Model.Speakers" class="form-control" placeholder="Parent Categories"></select>
+                        <span asp-validation-for="SpeakersIds" class="text-danger"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                    <button class="btn btn-light" asp-action="Index">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+

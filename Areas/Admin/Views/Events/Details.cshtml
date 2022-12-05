@@ -1,0 +1,35 @@
+﻿@{
+    EventDetailsViewModel edvm = Model;
+    Event eventt = edvm.Eventt;
+    List<Speaker> speakers = edvm.Speakers;
+    int spekearCount = 1;
+}
+
+<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Event Details</h4>
+                <p><b>Name: </b> @eventt.Name</p>
+                <p><b>Content: </b> @eventt.Content</p>
+                <p><b>Venue: </b> @eventt.Venue</p>
+                <p><b>StartTime: </b> @eventt.StartTime</p>
+                <p><b>EndTime: </b> @eventt.EndTime</p>                
+                
+                @foreach (var eventSpeaker in eventt.EventSpeakers)
+                {
+                    @foreach (var speaker in speakers)
+                    {
+                        if (eventSpeaker.Speaker.Id == speaker.Id)
+                        {
+                            <p><b>@(spekearCount++). Spekear: </b> @(speaker.Name + " "+speaker.Surname) </p>
+                        }
+                    }
+                }
+                <p><b>Course image:</b> </p> <img src="/assets/img/event/@eventt.ImageName" class="w-50" />
+                <br /> <br />
+                <p><a class="btn btn-light" asp-action="Index">Cancel</a></p>
+            </div>
+        </div>
+    </div>
+<

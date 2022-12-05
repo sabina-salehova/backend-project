@@ -1,0 +1,19 @@
+﻿@{
+    Speaker speaker = Model;
+}
+
+<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Speaker Details</h4>
+
+                <p><b>Fulname: </b> @(speaker.Name+" "+speaker.Surname)</p>
+                <p><b>Subtitle: </b> @speaker.Position</p>
+                <p><b>Slider image:</b> </p> <img src="/assets/img/event/@speaker.ImageName" class="w-50" />
+                <br/> <br/>
+                <p><a class="btn btn-light" asp-action="Index">Cancel</a></p>
+            </div>
+        </div>
+    </div>
+</div>

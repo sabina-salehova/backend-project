@@ -13,5 +13,6 @@
         public static string CoursePath;
 
         public static string BlogPath;
+        public static string SpeakerAndEventPath;
     }
 }
