@@ -5,22 +5,22 @@ using Microsoft.EntityFrameworkCore;
 
 namespace back_project.ViewComponents
 {
-    public class AllCourse : ViewComponent
+    public class AllBlogsViewComponent : ViewComponent
     {
         private readonly AppDbContext _dbContext;
-        public AllCourse(AppDbContext dbContext)
+        public AllBlogsViewComponent(AppDbContext dbContext)
         {
             _dbContext = dbContext;
         }
 
         public async Task<IViewComponentResult> InvokeAsync()
         {
-            List<Course> courses = await _dbContext.Courses
+            List<Blog> blogs = await _dbContext.Blogs
                 .Where(s => !s.IsDeleted)
                 .Include(x => x.Category)
                 .ToListAsync();
 
-            return View(courses);
+            return View(blogs);
         }
     }
 }
